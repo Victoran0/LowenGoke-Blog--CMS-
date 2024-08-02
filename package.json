@@ -1,0 +1,24 @@
+{
+  "name": "LowenGoke_Blog_CMS",
+  "version": "1.0.0",
+  "description": "Content Mangement System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CMS",
+    "Blog"
+  ],
+  "author": "Victor Oluwadare Olasunkanmi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "mongoose": "^8.5.2"
+  }
+}

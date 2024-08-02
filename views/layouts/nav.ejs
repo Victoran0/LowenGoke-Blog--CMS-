@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <a href="/" class="home-link">
+        <h1>Olamigoke Blog</h1>
+    </a>
+    <div class="nav-list">
+        <ul>
+            <% if( pages.length>0 ){ %>
+            
+                <% pages.forEach(page=> { %>
+                    <li><a href="/nav/<%= page.slug %>">
+                        <%= page.pageTitle %>
+                    </a></li>
+                    <% }) %>
+            <% } else {%>
+                <li>Pages will Appear here After been added</li>
+            <% } %>
+        </ul>
+    </div>
+</nav>
+

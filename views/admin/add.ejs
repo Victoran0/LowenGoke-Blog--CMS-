@@ -1,0 +1,48 @@
+<%- include('../layouts/header') %>
+<%- include('./nav', {admin: admin}) %>
+<main>
+    <h1>Add New Page</h1>
+    <form name="page-form" action="/admin/add" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="title">Title:</label>
+            <input name="pageTitle" type="text" id="pageTitle">
+        </div>
+        <div>
+            <label for="slug">Slug:</label>
+            <input type="text" id="slug" name="slug">
+        </div>
+        <div>
+            <label for="image">Image:</label>
+            <input name="pageImageName" type="file" id="pageImageName">
+        </div>
+        <div>
+            <label for="content">Content:</label>
+            <input class="input-page_content" name="pageContent" type="text" id="pageContent">
+        </div>
+        <% if (typeof(errors) !== 'undefined') { %>
+            <ul>
+                <% errors.forEach(error=> { %>
+                    <li class="error">
+                        <%= error.msg %>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+                <button type="submit">Add Page</button>
+    </form>
+</main>
+<%- include('../layouts/footer') %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="/js/tinymce/jquery.tinymce.min.js"></script>
+<script src="/js/tinymce/tinymce.min.js"></script>
+
+<script>
+    tinymce.init({
+        selector: '#pageContent',
+        height: 300,
+        menubar: false
+    });
+</script>
+

@@ -1,0 +1,11 @@
+<%- include('layouts/header') %>
+<%- include('admin/nav', {admin: admin}) %>
+<main>
+    <h1>Welcome</h1>
+    <h2>Hello <%= admin %>, welcome to the dashboard!</h2>
+    <% if (typeof message !== 'undefined'){ %>
+        <p class="success"><%= message%></p>
+    <% } %>
+</main>
+<%- include('layouts/footer') %>
+

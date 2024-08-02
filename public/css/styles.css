@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.nav-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-list ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 20rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+#editor-container {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.pageTitle {
+    width: 100px;
+    padding: 15px;
+}
+
+.pageEditDelete {
+    padding: 20px;
+}
+
+.pageContent {
+    width: 700px;
+    padding: 15px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.admin_name {
+    margin-bottom: 30px;
+}

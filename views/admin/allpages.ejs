@@ -1,0 +1,43 @@
+<%- include('../layouts/header') %>
+<%- include('./nav', {admin: admin}) %>
+<main>
+    
+<% if(pages.length> 0 ){ %>
+
+<h2>Previously Created Pages</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th class="pageTitle">Title</th>
+            <th>Image</th>
+            <th class="pageContent">Content</th>
+            <th class="pageEditDelete">Edit</th>
+            <th class="pageEditDelete">Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% pages.forEach(page=> { %>
+            <tr>
+                <td class="pageTitle">
+                    <%= page.pageTitle %>
+                </td>
+                <td>
+                    <img src="/uploads/<%= page.pageImageName %>" alt="<%= page.pageTitle %>">
+                </td>
+                <td class="pageContent">
+                    <%- page.pageContent %>
+                </td>
+                <td class="pageEditDelete"><a href="/admin/edit/<%= page.slug %>">Edit</a></td>
+                <td class="pageEditDelete"><a href="/admin/delete/<%= page.slug %>">Delete</a></td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
+<% } else { %>
+    <h2>No Existing page, Click on Add new Page to Create One!</h2>
+<% } %>
+
+</main>
+<%- include('../layouts/footer') %>

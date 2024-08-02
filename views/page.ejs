@@ -1,0 +1,17 @@
+<%- include('layouts/header') %>
+    <%- include('layouts/nav', {pages: pages}) %>
+    <p class="error"></p>
+    <section class="page">
+            <main>
+                <img src="/uploads/<%= page.pageImageName %>" alt="<%= page.pageTitle %>">
+                <h1>
+                    <%= page.pageTitle %>
+                </h1>
+                <div>
+                    <%- page.pageContent %>
+                </div>
+            </main>
+    </section>
+
+    <%- include('layouts/footer') %>
+
